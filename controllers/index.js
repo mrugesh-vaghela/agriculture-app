@@ -1,4 +1,6 @@
-const user = require('./user');
+const userController = require('./userController');
+const organizationController = require('./organizationController');
 module.exports = {
-    user
+    userController,
+    organizationController
 }

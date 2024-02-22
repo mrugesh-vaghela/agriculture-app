@@ -1,5 +1,5 @@
 "use strict";
-const { USER_STATUS } = require("../constants/db_constants");
+const { USER_STATUS, USER_TYPES } = require("../constants/db_constants");
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(
     "User",
@@ -19,9 +19,16 @@ module.exports = (sequelize, DataTypes) => {
       email: DataTypes.STRING,
       password: DataTypes.STRING,
       status: {
-        allowNull:false,
+        allowNull: false,
         type: DataTypes.ENUM,
         values: [USER_STATUS.ACTIVE, USER_STATUS.DELETED, USER_STATUS.INACTIVE],
+        defaultValue: USER_STATUS.ACTIVE,
+      },
+      role: {
+        allowNull: false,
+        type: DataTypes.ENUM,
+        values: [USER_TYPES.ADMIN, USER_TYPES.USER],
+        defaultValue: USER_TYPES.USER,
       },
       createdAt: {
         type: DataTypes.DATE,

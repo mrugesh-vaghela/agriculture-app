@@ -3,5 +3,9 @@ module.exports = Object.freeze({
         ACTIVE: 'active',
         INACTIVE: 'in-active',
         DELETED: 'deleted',
+    },
+    USER_TYPES: {
+        ADMIN: 'admin',
+        USER: 'user',        
     }
 });
