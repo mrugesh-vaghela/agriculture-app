@@ -9,7 +9,4 @@
 ### Run the test suite
 - `npm test`
 
-### Postman collection link
-- [Create Organization](https://www.postman.com/mrugeshsyngenta/workspace/syngenta/request/10404838-c85eb54f-0376-4341-9fe3-94de64327058?ctx=documentation)
-- [Get Organization by UUID](https://www.postman.com/mrugeshsyngenta/workspace/syngenta/request/10404838-23ffefcb-1fb0-4255-803c-f58b470f1330?ctx=documentation)
-- Create User
+### [Postman collection](https://www.postman.com/mrugeshsyngenta/workspace/syngenta/collection/10404838-d19bc1d2-08e5-4fd3-a9a4-a4f0f40547d2?action=share&creator=10404838&active-environment=10404838-f1c73ffe-fa2a-471d-b169-165cf171f8f8)https://www.postman.com/mrugeshsyngenta/workspace/syngenta/collection/10404838-d19bc1d2-08e5-4fd3-a9a4-a4f0f40547d2?action=share&creator=10404838&active-environment=10404838-f1c73ffe-fa2a-471d-b169-165cf171f8f8
