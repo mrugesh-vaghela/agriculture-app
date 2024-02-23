@@ -8,7 +8,7 @@ authController.isAuthenticated = (req, res, next) => {
   if (!token) return res.status(401).json("Unauthorize user");
 
   try {
-    const decoded = jwt.verify(token, 'W9BUPjZ1y95sRL1Rwmoce823Vyu3Wjspu3OkR4dqXnmhdFq-5p6nyACHlv-iM0mi');
+    const decoded = jwt.verify(token, 'YOUR KEY');
     req.user = decoded;
     next();
   } catch (e) {
@@ -27,9 +27,9 @@ authController.getToken = async (req, res) => {
 
     var options = {
       method: "POST",
-      url: "https://dev-f8bchczh21t5tvvn.us.auth0.com/oauth/token",
+      url: "https://{auth_domain}/oauth/token",
       headers: { "content-type": "application/json" },
-      body: '{"client_id":"LCL1edwJ8YtI86ySGirecxCNZxagwfqw","client_secret":"W9BUPjZ1y95sRL1Rwmoce823Vyu3Wjspu3OkR4dqXnmhdFq-5p6nyACHlv-iM0mi","audience":"https://dev-f8bchczh21t5tvvn.us.auth0.com/api/v2/","grant_type":"client_credentials"}',
+      body: '{"client_id":"client_id","client_secret":"client_secrete","audience":"audience","grant_type":"client_credentials"}',
     };
 
     request(options, function (error, response, body) {
