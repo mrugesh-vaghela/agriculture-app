@@ -29,13 +29,5 @@ module.exports = (sequelize, DataTypes) => {
     },
     { tableName: "crops" }
   );
-  Crop.associate = function (models) {
-    // associations can be defined here
-    Crop.belongsTo(models.Field, {
-      foreignKey: "field_id",
-      onDelete: "CASCADE",
-      as: "field",
-    });
-  };
   return Crop;
 };

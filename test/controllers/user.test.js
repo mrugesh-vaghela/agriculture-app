@@ -1,6 +1,6 @@
 const sinon = require("sinon");
 const httpMocks = require("node-mocks-http");
-describe.only("User Controller", () => {
+describe("User Controller", () => {
   let userController;
   let UserModel;
   beforeEach(() => {

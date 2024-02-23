@@ -33,4 +33,18 @@ organizationController.createOrganization = async (req, res) => {
     });
   }
 };
+
+organizationController.getOrganization = async (req, res) => {
+  //create the admin user for the organization while creating the organization
+  try {
+    const organizationUuid = req.params.organizationUuid;
+    const organization = await organizationService.getOrganizationByUuid(organizationUuid);
+    return res.status(STATUS_CODES.SUCCESS).send(organization);
+  } catch (error) {
+    return res.status(STATUS_CODES.ERROR).send({
+      status: STATUS.ERROR,
+      message: stringifyError(error),
+    });
+  }
+};
 module.exports = organizationController;

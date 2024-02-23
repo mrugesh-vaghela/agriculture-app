@@ -6,5 +6,6 @@ module.exports = Object.freeze({
   STATUS_CODES: {
     SUCCESS: 201,
     ERROR: 400,
+    UNAUTHENTICATED: 403,
   },
 });

@@ -36,10 +36,10 @@ models.sequelize.sync().then(function () {
 
 require("./routes")(app);
 app.get("/", (req, res) => {
-  console.log(req.oidc.isAuthenticated());
+  // console.log(req.oidc.isAuthenticated());
   const isAuthenticated = req.oidc.isAuthenticated();
   const response = isAuthenticated ? req.oidc.user : "Not logged in";
-  res.send(response);
+  return res.send(response);
 });
 
 module.exports = app;

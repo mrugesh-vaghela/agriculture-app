@@ -1,6 +1,6 @@
 const sinon = require("sinon");
 const httpMocks = require("node-mocks-http");
-describe.only("Organization Controller", () => {
+describe("Organization Controller", () => {
   let organizationController;
   let OrganizationModel;
   let UserModel;
